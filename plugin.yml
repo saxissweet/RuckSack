@@ -1,0 +1,4 @@
+name: RuckSack
+main: com.dmillerteej.rucksack.RuckSack
+version: 1
+authors: [teej107, dmiller2400]

@@ -1,0 +1,4 @@
+RuckSack
+========
+
+A bukkit plugin

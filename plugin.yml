@@ -1,4 +1,4 @@
 name: RuckSack
-main: com.dmillerteej.rucksack.RuckSack
+main: com.dmillerteej.rucksack.RuckSackPlugin
 version: 1
 authors: [teej107, dmiller2400]

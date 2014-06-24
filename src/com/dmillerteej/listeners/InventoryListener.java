@@ -1,8 +1,12 @@
 package com.dmillerteej.listeners;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import com.dmillerteej.rucksack.RuckSackPlugin;
@@ -19,18 +23,19 @@ public class InventoryListener implements Listener
 	@EventHandler
 	public void onInventoryClick(InventoryClickEvent event)
 	{
+		Player player = (Player) event.getWhoClicked();
 		ItemStack item = event.getCurrentItem();
 		for(ItemStack i : plugin.getBackpack().getBackpack())
 		{
 			if(item.equals(i))
 			{
-				//Code here
+				player.openInventory(Bukkit.createInventory(player, InventoryType.CHEST, i.getType().toString() + " Backpack"));
 				break;
 			}
 		}
 		if(item.equals(plugin.getRucksack().getRucksack()))
 		{
-			
+			player.openInventory(Bukkit.createInventory(player, InventoryType.CHEST, "Rucksack"));
 		}
 	}
 }

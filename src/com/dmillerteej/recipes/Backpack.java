@@ -6,7 +6,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 
 public class Backpack
-{
+{	
 	private ItemStack[] backpacks;
 
 	public Backpack()

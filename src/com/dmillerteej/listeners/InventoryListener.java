@@ -23,6 +23,7 @@ public class InventoryListener implements Listener
 	@EventHandler
 	public void onInventoryClick(InventoryClickEvent event)
 	{
+		//Check the itemmeta data and see if it has a inventory file hooked up to it. If not, create new inventory and save it
 		Player player = (Player) event.getWhoClicked();
 		ItemStack item = event.getCurrentItem();
 		for(ItemStack i : plugin.getBackpack().getBackpack())
